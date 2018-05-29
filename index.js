@@ -95,6 +95,10 @@ SonicBoom.prototype.end = function () {
   actualClose(this)
 }
 
+SonicBoom.prototype.flush = function () {
+  actualWrite(this)
+}
+
 SonicBoom.prototype.flushSync = function () {
   if (this.fd < 0) {
     throw new Error('sonic boom is not ready yet')
